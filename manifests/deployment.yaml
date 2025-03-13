@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rice-api-app
+  namespace: rice-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rice-api-app
+  template:
+    metadata:
+      labels:
+        app: rice-api-app
+    spec:
+      containers:
+      - name: rice-api-app
+        image: mmregistry.mmvietnam.com:5000/rice-api:latest
+        ports:
+        - containerPort: 3001
+      imagePullSecrets:
+      - name: mmregistry-secret
