@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: rice-api-app
-        image: mmregistry.mmvietnam.com:5000/rice-api:latest
+        image: mmregistry.mmvietnam.com:5000/rice-api:v1.0.2-14
         env:
         - name: SUBNET
           value: "10.244.30,172.26.17,172.17.0.1,127.0.0,172.20.240,172.26.16,172.26.24,172.26.130,::1"
